@@ -27,6 +27,11 @@ public class LeetCode_0015 {
         System.out.println(threeSum(nums));
     }
 
+    /**
+    * Arrays.sort(nums);的时间复杂度是O(nlogn)
+    * 双循环的时间复杂度是O(n*2)
+    * 使用了双指针，空间复杂度是O(1)
+    */
     public static List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
         if (nums == null || nums.length < 3)
