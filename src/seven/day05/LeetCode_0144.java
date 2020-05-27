@@ -1,6 +1,7 @@
 package seven.day05;
 
 import seven.module.TreeNode;
+import sun.rmi.server.InactiveGroupException;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -27,6 +28,16 @@ import java.util.Stack;
  */
 public class LeetCode_0144 {
     static List<Integer> list = new LinkedList<>();
+
+    /**
+     * 使用Morris遍历的方式使得空间复杂度降低为O(1)
+     * @param root
+     * @return
+     */
+    public static List<Integer> morrisTracersal(TreeNode root) {
+        //TODO
+        return list;
+    }
 
     /**
      * 使用迭代的方式。使用一个栈的结构
