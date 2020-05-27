@@ -18,8 +18,13 @@ import java.util.HashMap;
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
 public class LeetCode_0001 {
+    /**
+     * 使用2次循环，时间复杂度O(n),空间复杂度O(n)
+     * @param nums
+     * @param target
+     * @return
+     */
     public int[] twoSum(int[] nums, int target) {
-        //使用2次循环，时间复杂度O(n),空间复杂度O(n)
         if (nums == null || nums.length < 2)
             throw new IllegalArgumentException("nums参数异常");
         HashMap<Integer,Integer> map = new HashMap<>();
