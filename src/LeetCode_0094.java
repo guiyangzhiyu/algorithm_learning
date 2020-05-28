@@ -29,7 +29,7 @@ public class LeetCode_0094 {
     static List<Integer> list = new LinkedList<>();
     public static void main(String[] args){
         Integer[] arr = {1,null,2,3};
-        System.out.println(Arrays.asList(inorderTraversal(TreeNode.generateTreeNode(arr))));
+        System.out.println(inorderTraversal(TreeNode.generateTreeNode(arr)));
     }
 
     /**

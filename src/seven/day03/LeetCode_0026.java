@@ -1,5 +1,7 @@
 package seven.day03;
 
+import java.util.Arrays;
+
 /**
  * 给定一个排序数组，你需要在 原地 删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。
  *
@@ -28,10 +30,26 @@ package seven.day03;
 public class LeetCode_0026 {
     public static void main(String[] args) {
         //有序数组
-        int[] nums = new int[]{-1, 0, 1, 1, 2,2,2,6,7,8,8,9,9,9};
-        System.out.println(removeDuplicates(nums));
+        int[] nums = {-1, 0, 1, 1, 2,2,2,6,7,8,8,9,9,9};
+        System.out.println(removeDuplicatesK(nums,2));
+        System.out.println(Arrays.toString(nums));
     }
 
+    /**
+     * 返回不重复的数组的长度
+     * @param nums 数组
+     * @param k 表示最多容忍k个重复元素
+     * @return
+     */
+    public static int removeDuplicatesK(int nums[],int k){
+        int i = 0;
+        for(int n : nums) {
+            if (i < k || n > nums[i - k]) {
+                nums[i++] = n;
+            }
+        }
+        return i;
+    }
     /**
      * 返回不重复数组的长度
      * @param nums

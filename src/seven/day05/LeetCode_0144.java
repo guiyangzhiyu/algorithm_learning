@@ -31,7 +31,7 @@ public class LeetCode_0144 {
     static List<Integer> list = new LinkedList<>();
 
     public static void main(String[] args) {
-        Integer[] arr = new Integer[]{1,null,2,3};
+        Integer[] arr = {1,null,2,3};
         System.out.println(preorderTraversal1(TreeNode.generateTreeNode(arr)));
     }
     /**

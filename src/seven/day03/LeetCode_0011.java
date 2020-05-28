@@ -22,7 +22,7 @@ public class LeetCode_0011 {
 
     public static void main(String[] args) {
         //有序数组
-        int[] nums = new int[]{1,3,9,34,3,5,23,5,234,23,4,523};
+        int[] nums = {1,3,9,34,3,5,23,5,234,23,4,523};
         System.out.println(maxArea(nums));
     }
 

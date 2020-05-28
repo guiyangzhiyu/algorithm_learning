@@ -18,7 +18,7 @@ import java.util.Arrays;
  */
 public class LeetCode_0283 {
     public static void main(String[] args) {
-        int[] nums = new int[]{0,3,1,0,3,5,0,9,8};
+        int[] nums = {0,3,1,0,3,5,0,9,8};
         moveZeroes(nums);
         System.out.println(Arrays.toString(nums));
     }
