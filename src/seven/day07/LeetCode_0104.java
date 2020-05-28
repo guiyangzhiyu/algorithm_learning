@@ -25,12 +25,16 @@ import seven.module.TreeNode;
  */
 public class LeetCode_0104 {
 
+    public static void main(String[] args) {
+        Integer[] arr = {3,9,20,null,null,15,7};
+        System.out.println(maxDepth(TreeNode.generateTreeNode(arr)));
+    }
     /**
      * 二叉树的最大深度，即为 max(左子树的深度，右子树的深度)+1.可以以此来进行递归
      * @param root
      * @return
      */
-    public int maxDepth(TreeNode root) {
+    public static int maxDepth(TreeNode root) {
         return helper(root);
     }
 
@@ -40,7 +44,7 @@ public class LeetCode_0104 {
      * @param root
      * @return
      */
-    public int helper(TreeNode root) {
+    public static int helper(TreeNode root) {
         if(root == null)
             return 0;
         if (root.left == null && root.right == null)

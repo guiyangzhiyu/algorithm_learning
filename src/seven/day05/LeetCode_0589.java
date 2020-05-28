@@ -23,7 +23,6 @@ public class LeetCode_0589 {
 
     static  List<Integer> list = new LinkedList<>();
     public static void main(String[] args) {
-
 //        System.out.println(preorder_1(root));
 //        System.out.println(preorder(root));
     }

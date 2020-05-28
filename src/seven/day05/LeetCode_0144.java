@@ -1,6 +1,7 @@
 package seven.day05;
 
 import seven.module.TreeNode;
+import sun.reflect.generics.tree.Tree;
 import sun.rmi.server.InactiveGroupException;
 
 import java.util.LinkedList;
@@ -29,6 +30,10 @@ import java.util.Stack;
 public class LeetCode_0144 {
     static List<Integer> list = new LinkedList<>();
 
+    public static void main(String[] args) {
+        Integer[] arr = new Integer[]{1,null,2,3};
+        System.out.println(preorderTraversal1(TreeNode.generateTreeNode(arr)));
+    }
     /**
      * 使用Morris遍历的方式使得空间复杂度降低为O(1)
      * @param root

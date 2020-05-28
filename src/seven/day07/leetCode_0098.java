@@ -37,13 +37,17 @@ import java.util.Stack;
  */
 public class leetCode_0098 {
 
+    public static void main(String[] args){
+        Integer[] arr = {5,1,4,null,null,3,6};
+        System.out.println(isValidBST(TreeNode.generateTreeNode(arr)));
+    }
     /**
      * 时间复杂度 O(n)
      * 空见复杂度 O(n)
      * @param root
      * @return
      */
-    public boolean isValidBST(TreeNode root) {
+    public static boolean isValidBST(TreeNode root) {
         //如果采用中序遍历的方式，得到的值是升序排列的，那么表示是一个有效的二叉搜索树
         double preValue = -Double.MAX_VALUE;
         Stack<TreeNode> stack = new Stack<>();
@@ -53,11 +57,10 @@ public class leetCode_0098 {
                 root = root.left;
             }
             root = stack.pop();
-            if (root.val > preValue)
+            if (root.val <= preValue)
                 return false;
             preValue = root.val;
             root = root.right;
-
         }
         return true;
     }
