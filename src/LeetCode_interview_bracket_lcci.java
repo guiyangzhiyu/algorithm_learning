@@ -47,5 +47,6 @@ public class LeetCode_interview_bracket_lcci {
             generate(left + 1,right,n,s+"(");
         if (right < left) //右括号不超过左括号的个数，才能添加
             generate(left,right+1,n,s+")");
+
     }
 }
