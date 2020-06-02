@@ -1,6 +1,6 @@
 package seven.day07;
 
-import seven.module.TreeNode;
+import model.TreeNode;
 
 import java.util.Stack;
 

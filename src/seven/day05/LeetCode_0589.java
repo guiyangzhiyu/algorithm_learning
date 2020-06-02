@@ -1,6 +1,6 @@
 package seven.day05;
 
-import seven.module.Node;
+import model.Node;
 
 import java.util.LinkedList;
 import java.util.List;

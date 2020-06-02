@@ -1,6 +1,6 @@
 package seven.day07;
 
-import seven.module.TreeNode;
+import model.TreeNode;
 
 /**
  * 给定一个二叉树，找出其最大深度。

@@ -1,5 +1,4 @@
-import seven.module.TreeNode;
-import sun.reflect.generics.tree.Tree;
+import model.TreeNode;
 
 /**
  * 给定一个二叉树, 找到该树中两个指定节点的最近公共祖先。
@@ -66,6 +65,8 @@ public class LeetCode_0236 {
         }
         return lson || rson || root.val == p.val || root.val == q.val;
     }
+
+
     public static TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         dfs(root,p,q);
         return result;

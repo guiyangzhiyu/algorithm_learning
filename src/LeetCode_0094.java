@@ -1,7 +1,5 @@
-import seven.module.TreeNode;
-import sun.reflect.generics.tree.Tree;
+import model.TreeNode;
 
-import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;

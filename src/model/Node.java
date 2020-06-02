@@ -1,4 +1,4 @@
-package seven.module;
+package model;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package seven.module;
+package model;
 
 /**
  * 链表结构
