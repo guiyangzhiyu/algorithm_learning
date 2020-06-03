@@ -48,19 +48,21 @@ public class LeetCode_0236 {
 
     /**
      * root中是否包含p或者q
-     * @param root
-     * @param p
-     * @param q
-     * @return
+     * @param root 树的根节点
+     * @param p 子节点
+     * @param q 子节点
+     * @return 是否包含
      */
     public static boolean dfs(TreeNode root,TreeNode p,TreeNode q) {
-        if (root == null) return false;
+        if (root == null) {
+            return false;
+        }
         //左子树是否包含p或者q
         boolean lson = dfs(root.left,p,q);
         //右子树是否包含p或者q
         boolean rson = dfs(root.right,p,q);
         //TODO 不熟
-        if ((lson && rson) || ((root.val == p.val || root.val == q.val) && (lson || rson))){
+        if ((lson && rson) || ((root.val == p.val || root.val == q.val) && (lson || rson))) {
             result = root;
         }
         return lson || rson || root.val == p.val || root.val == q.val;
