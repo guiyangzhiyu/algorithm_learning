@@ -20,13 +20,14 @@ import java.util.HashMap;
 public class LeetCode_0001 {
     /**
      * 使用2次循环，时间复杂度O(n),空间复杂度O(n)
-     * @param nums
-     * @param target
-     * @return
+     * @param nums 原数组
+     * @param target 目标值
+     * @return 索引数组
      */
     public int[] twoSum(int[] nums, int target) {
-        if (nums == null || nums.length < 2)
+        if (nums == null || nums.length < 2) {
             throw new IllegalArgumentException("nums参数异常");
+        }
         HashMap<Integer,Integer> map = new HashMap<>();
         for(int i = 0;i < nums.length;i++) {
             map.putIfAbsent(nums[i], i);

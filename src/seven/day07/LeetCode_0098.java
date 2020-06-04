@@ -57,8 +57,9 @@ public class LeetCode_0098 {
                 root = root.left;
             }
             root = stack.pop();
-            if (root.val <= preValue)
+            if (root.val <= preValue) {
                 return false;
+            }
             preValue = root.val;
             root = root.right;
         }

@@ -32,14 +32,15 @@ public class LeetCode_0011 {
      * 最多遍历数组一次，时间复杂度O(n)
      * 额外使用了2个指针变量，空间复杂度O(1)
      *
-     * @param height
-     * @return
+     * @param height 数组
+     * @return 面积
      */
     public static int maxArea(int[] height) {
         //一个头指针，一个尾指针。比较两个指针的大小，移动比较小的值。
         int maxArea = 0;
-        if (height == null || height.length < 2)
+        if (height == null || height.length < 2) {
             return maxArea;
+        }
         int head = 0,foot = height.length -1;
         // maxArea = (foot-head) * (Math.min(height[head],height[foot]));
         while (head < foot) {

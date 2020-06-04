@@ -41,27 +41,35 @@ public class LeetCode_0145 {
                 stack.push(cur);
                 cur = cur.left;
             }
-            if (cur != null) list.add(cur.val); //表示cur是非空的叶子节点
+            //表示cur是非空的叶子节点
+            if (cur != null) {
+                list.add(cur.val);
+            }
+
             //TODO 没完全懂
-            while (!stack.empty() && cur == stack.peek().right) { // cur==null,并且stack栈顶的右节点也为null
+            // cur==null,并且stack栈顶的右节点也为null
+            while (!stack.empty() && cur == stack.peek().right) {
                 cur = stack.pop();
                 list.add(cur.val);
             }
-            if (stack.empty())
+            if (stack.empty()) {
                 cur = null;
-            else
+            }
+            else {
                 cur = stack.peek().right;
+            }
         }
 
     }
 
     /**
      * 是否是叶子节点
-     * @param node
-     * @return
+     * @param node 节点
      */
     public static boolean isLeaf(TreeNode node) {
-        if (node == null) return true;
+        if (node == null) {
+            return true;
+        }
         return node.left == null && node.right == null;
     }
 
@@ -71,7 +79,9 @@ public class LeetCode_0145 {
      * @param root
      */
     public static void postOrderTraversalStack(TreeNode root) {
-        if (root == null) return;
+        if (root == null) {
+            return;
+        }
         Stack<TreeNode> stack = new Stack<>();
         stack.push(root);
         while (!stack.empty()) {
@@ -96,8 +106,9 @@ public class LeetCode_0145 {
      * @return
      */
     public static void postorderTraversal(TreeNode root) {
-        if (root == null)
+        if (root == null) {
             return;
+        }
         postorderTraversal(root.left);
         postorderTraversal(root.right);
         list.add(root.val);

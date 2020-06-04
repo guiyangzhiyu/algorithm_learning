@@ -36,7 +36,9 @@ public class LeetCode_0589 {
      * @return
      */
     public static List<Integer> preorder_1(Node root) {
-        if (root == null) return list;
+        if (root == null) {
+            return list;
+        }
         Stack<Node> stack = new Stack<>();
         stack.push(root);
         while(!stack.empty()) {

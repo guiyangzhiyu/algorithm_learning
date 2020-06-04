@@ -36,13 +36,15 @@ public class LeetCode_0111 {
      * 可以通过广度优先搜索来记录，
      * 得到的第一个左右子树都为空的节点所在的层级就是最小深度
      * 时间复杂度和空间复杂度都是O(n)
-     * @param root
-     * @return
+     * @param root 根节点
+     * @return 最小深度
      */
     public static int minDepth(TreeNode root) {
         // 节点以及其对应的深度
         LinkedList<Pair<TreeNode,Integer>> list = new LinkedList<>();
-        if (root == null) return 0;
+        if (root == null) {
+            return 0;
+        }
         list.add(new Pair<>(root,1));
         TreeNode tempNode;
         Integer tempDepth = 0;
@@ -50,12 +52,15 @@ public class LeetCode_0111 {
             Pair<TreeNode,Integer> pair = list.poll();
             tempNode = pair.getKey();
             tempDepth = pair.getValue();
-            if (tempNode.left == null && tempNode.right == null)
+            if (tempNode.left == null && tempNode.right == null) {
                 return tempDepth;
-            if (tempNode.left != null)
-                list.add(new Pair<>(tempNode.left,tempDepth + 1));
-            if (tempNode.right != null)
-                list.add(new Pair<>(tempNode.right,tempDepth+1));
+            }
+            if (tempNode.left != null) {
+                list.add(new Pair<>(tempNode.left, tempDepth + 1));
+            }
+            if (tempNode.right != null) {
+                list.add(new Pair<>(tempNode.right, tempDepth + 1));
+            }
         }
         return tempDepth;
     }

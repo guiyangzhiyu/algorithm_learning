@@ -45,10 +45,12 @@ public class LeetCode_0104 {
      * @return
      */
     public static int helper(TreeNode root) {
-        if(root == null)
+        if (root == null) {
             return 0;
-        if (root.left == null && root.right == null)
+        }
+        if (root.left == null && root.right == null) {
             return 1;
+        }
         return Math.max(helper(root.left),helper(root.right)) + 1;
     }
 }

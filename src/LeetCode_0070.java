@@ -33,7 +33,7 @@ public class LeetCode_0070 {
 
     /**
      *
-     * @param level
+     * @param level 台阶数
      * @return
      */
     public static int climbStairs(int level){
@@ -49,10 +49,12 @@ public class LeetCode_0070 {
      * @param temp
      */
     private static int climb_stairs(int i, int level, int[] temp) {
-        if (i > level)
+        if (i > level) {
             return 0;
-        if (i == level)
+        }
+        if (i == level) {
             return 1;
+        }
         temp[i] = climb_stairs(i+1,level,temp) + climb_stairs(i+2,level,temp);
         return temp[i];
     }

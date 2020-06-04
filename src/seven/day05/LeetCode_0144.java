@@ -34,7 +34,7 @@ public class LeetCode_0144 {
     }
     /**
      * 使用Morris遍历的方式使得空间复杂度降低为O(1)
-     * @param root
+     * @param root 根节点
      * @return
      */
     public static List<Integer> morrisTracersal(TreeNode root) {
@@ -51,14 +51,18 @@ public class LeetCode_0144 {
      */
     public static List<Integer> preorderTraversal1(TreeNode root) {
         Stack<TreeNode> stack = new Stack<>();
-        if (root != null) stack.push(root);
+        if (root != null) {
+            stack.push(root);
+        }
         while(!stack.empty()){
             TreeNode tempNode = stack.pop();
             list.add(tempNode.val);
-            if (tempNode.right != null)
+            if (tempNode.right != null) {
                 stack.push(tempNode.right);
-            if (tempNode.left != null)
+            }
+            if (tempNode.left != null) {
                 stack.push(tempNode.left);
+            }
         }
         return list;
     }
@@ -77,7 +81,9 @@ public class LeetCode_0144 {
      * @param root
      */
     public static void helper(TreeNode root){
-        if (root == null) return;
+        if (root == null) {
+            return;
+        }
         list.add(root.val);
         helper(root.left);
         helper(root.right);

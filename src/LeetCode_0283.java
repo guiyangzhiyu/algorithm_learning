@@ -24,8 +24,8 @@ public class LeetCode_0283 {
     }
 
     /**
-     * 把0移动到数组的最后
-     * @param nums
+     * 把 0移动到数组的最后
+     * @param nums  目标数组
      */
     public static void moveZeroes(int[] nums) {
         // 记录非零数据的索引

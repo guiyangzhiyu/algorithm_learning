@@ -39,14 +39,19 @@ public class LeetCode_interview_bracket_lcci {
      * @param s 生成的字符串
      */
     private static void generate(int left, int right, int n, String s) {
-        if (left == n && right == n) { //退出递归的条件
+        //退出递归的条件
+        if (left == n && right == n) {
             list.add(s);
             return;
         }
-        if (left < n) // 只要左括号不超过总对数，那么就能进行添加
-            generate(left + 1,right,n,s+"(");
-        if (right < left) //右括号不超过左括号的个数，才能添加
-            generate(left,right+1,n,s+")");
+        //只要左括号不超过总对数，那么就能进行添加
+        if (left < n) {
+            generate(left + 1, right, n, s + "(");
+        }
+        //右括号不超过左括号的个数，才能添加
+        if (right < left) {
+            generate(left, right + 1, n, s + ")");
+        }
 
     }
 }

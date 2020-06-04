@@ -22,6 +22,7 @@ import java.util.List;
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
 public class LeetCode_0015 {
+    public static final int LENGTH = 3;
     public static void main(String[] args) {
         int[] nums = {-1, 0, 1, 2, -1, -4};
         System.out.println(threeSum(nums));
@@ -34,13 +35,15 @@ public class LeetCode_0015 {
     */
     public static List<List<Integer>> threeSum(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
-        if (nums == null || nums.length < 3)
+        if (nums == null || nums.length < LENGTH) {
             return result;
+        }
         //对数组进行排序
         Arrays.sort(nums);
         for (int i = 0; i < nums.length; i++) {
-            if (nums[i] > 0)
+            if (nums[i] > 0) {
                 break;
+            }
             //两个指针，分别指向当前遍历值的后续列表的两端
             int p = i + 1;
             int q = nums.length - 1;
@@ -48,19 +51,20 @@ public class LeetCode_0015 {
             //不能去除还没有遍历到的元素，这个元素可能会再运算中使用，只能与之前遍历过的元素进行比较
             // if((i < nums.length - 1) && nums[i] == nums[i+1])
             //     continue;
-            if (i > 0 && nums[i] == nums[i - 1])
+            if (i > 0 && nums[i] == nums[i - 1]) {
                 continue;
+            }
             while (p < q) {
                 if (nums[i] + nums[p] + nums[q] == 0) {
-                    // ArrayList<Integer> tempList = new ArrayList<>();
-                    // tempList.add(nums[i]);
-                    // tempList.add(nums[p]);
-                    // tempList.add(nums[q]);
                     result.add(Arrays.asList(nums[i], nums[p], nums[q]));
-                    while (p < q && nums[p] == nums[p + 1]) //前指针去重
+                    //前指针去重
+                    while (p < q && nums[p] == nums[p + 1]) {
                         p++;
-                    while (p < q && nums[q] == nums[q - 1]) //后指针去重
+                    }
+                    //后指针去重
+                    while (p < q && nums[q] == nums[q - 1]) {
                         q--;
+                    }
                     //继续
                     p++;
                     q--;

@@ -39,9 +39,9 @@ public class LeetCode_0026 {
      * 返回不重复的数组的长度
      * @param nums 数组
      * @param k 表示最多容忍k个重复元素
-     * @return
+     * @return 不重复长度
      */
-    public static int removeDuplicatesK(int nums[],int k){
+    public static int removeDuplicatesK(int[] nums,int k){
         int i = 0;
         for(int n : nums) {
             if (i < k || n > nums[i - k]) {
@@ -52,15 +52,16 @@ public class LeetCode_0026 {
     }
     /**
      * 返回不重复数组的长度
-     * @param nums
+     * @param nums 数组
      * @return new nums length
      *
      * 一次循环，时间复杂度O(n)
      * 没有使用额外的数据空间，使用双指针的方式遍历数组，空间复杂度O(1)
      */
     public static int removeDuplicates(int[] nums) {
-        if (nums == null || nums.length == 0)
+        if (nums == null || nums.length == 0) {
             return 0;
+        }
         int i = 0;
         for(int j = 1;j<nums.length;j++) {
             if (nums[i] != nums[j]){

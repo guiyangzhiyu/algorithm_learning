@@ -34,8 +34,8 @@ public class LeetCode_0094 {
      * 时间复杂度O(n)
      * 空间复杂度O(n)
      * 迭代的方式。使用一个栈来记录节点
-     * @param root
-     * @return
+     * @param root 根节点
+     * @return 中序遍历集合
      */
     public static List<Integer> inorderTraversal(TreeNode root) {
         Stack<TreeNode> stack = new Stack<>();
@@ -56,11 +56,12 @@ public class LeetCode_0094 {
      * 采用递归遍历的方式
      * 时间复杂度O(n) n表示数的节点数
      * 空间复杂度O(1)
-     * @param root
+     * @param root 根节点
      */
     public static void minOrder(TreeNode root) {
-        if (root == null)
+        if (root == null) {
             return;
+        }
         minOrder(root.left);
         list.add(root.val);
         minOrder(root.right);
