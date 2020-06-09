@@ -1,4 +1,3 @@
-package leetcode.editor.cn;
 //给定一个数组 nums，编写一个函数将所有 0 移动到数组的末尾，同时保持非零元素的相对顺序。 
 //
 // 示例: 
@@ -15,11 +14,15 @@ package leetcode.editor.cn;
 // Related Topics 数组 双指针
 
 
-class MoveZeroes {
-    public static void main(String[] args) {
+package leetcode.editor.cn;
+//java:移动零
 
+public class P283MoveZeroes {
+    public static void main(String[] rgs) {
+        Solution solution = new P283MoveZeroes().new Solution();
     }
 
+    //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public void moveZeroes(int[] nums) {
             if (nums == null) {
@@ -38,4 +41,6 @@ class MoveZeroes {
             }
         }
     }
+//leetcode submit region end(Prohibit modification and deletion)
+
 }

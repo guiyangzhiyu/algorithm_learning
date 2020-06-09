@@ -1,4 +1,3 @@
-package leetcode.editor.cn;
 //假设你正在爬楼梯。需要 n 阶你才能到达楼顶。 
 //
 // 每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？ 
@@ -25,11 +24,14 @@ package leetcode.editor.cn;
 // Related Topics 动态规划
 
 
-class ClimbingStairs {
-    public static void main(String[] args) {
+package leetcode.editor.cn;
+//java:爬楼梯
 
+public class P70ClimbingStairs {
+    public static void main(String[]rgs) { 
+        Solution solution = new P70ClimbingStairs().new Solution();
     }
-
+    //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public int climbStairs(int n) {
             int a = 1, b = 1;
@@ -38,5 +40,21 @@ class ClimbingStairs {
             }
             return a;
         }
+
+        public int climbStairs2(int n ) {
+            if (n <= 2) {
+                return n;
+            }
+            int result = 0;
+            int first = 1,second = 2;
+            for (int i = 3; i <= n; i++) {
+                result = first + second;
+                first = second;
+                second = result;
+            }
+            return result;
+        }
     }
+//leetcode submit region end(Prohibit modification and deletion)
+
 }
