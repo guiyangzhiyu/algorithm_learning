@@ -43,23 +43,24 @@ import java.util.Map;
 public class LeetCode_0020 {
     static Map<Character, Character> map = new HashMap<>();
     public static void main(String[] args) {
-        map.put(')', '(');
-        map.put(']', '[');
-        map.put('}', '{');
-        System.out.println(isValid("[][][{}]{()}"));
+        System.out.println(isValid("()[]{}"));
     }
 
     public static boolean isValid(String s) {
         //使用栈的方式，左括号入栈，如果遍历到右括号，与栈顶元素不相等，那么就表示非法
         Deque<Character> deque = new LinkedList<>();
+        Map<Character, Character> map = new HashMap<>();
+        map.put(')', '(');
+        map.put(']', '[');
+        map.put('}', '{');
         for (int i = 0; i < s.length(); i++) {
             if (map.containsKey(s.charAt(i))) {
-                Character temp = deque.isEmpty() ? '?' : deque.removeFirst();
-                if (!temp.equals(map.get(s.charAt(i)))) {
+                Character temp = deque.pollFirst();
+                if (temp == null || !temp.equals(map.get(s.charAt(i)))) {
                     return false;
                 }
             } else {
-                deque.addFirst(s.charAt(i));
+                deque.offerFirst(s.charAt(i));
             }
         }
         return deque.isEmpty();
