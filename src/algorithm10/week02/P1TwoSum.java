@@ -14,7 +14,7 @@
 // Related Topics 数组 哈希表
 
 
-package leetcode.editor.cn;
+package algorithm10.week02;
 //java:两数之和
 
 import java.util.HashMap;
