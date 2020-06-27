@@ -23,38 +23,42 @@
 // 
 // Related Topics 动态规划
 
-
-package leetcode.editor.cn;
-//java:爬楼梯
+package algorithm10.week03;
 
 public class P70ClimbingStairs {
-    public static void main(String[]rgs) { 
+
+    public static void main(String[] args) {
         Solution solution = new P70ClimbingStairs().new Solution();
     }
+
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
+        //更简洁
         public int climbStairs(int n) {
-            int a = 1, b = 1;
-            while (n-- > 0) {
-                a = (b += a) - a;
-            }
-            return a;
-        }
-
-        public int climbStairs2(int n ) {
-            if (n <= 2) {
+            if (n < 3) {
                 return n;
             }
-            int result = 0;
-            int first = 1,second = 2;
-            for (int i = 3; i <= n; i++) {
-                result = first + second;
-                first = second;
-                second = result;
+            int a = 1,b =2;
+            for (int i = 2; i < n; i++) {
+                a = (b += a) - a;
             }
-            return result;
+            return b;
+        }
+        public int climbStairs2(int n) {
+            if (n < 3) {
+                return n;
+            }
+            int temp = 0;
+            int a = 1, b = 2;
+            for (int i = 2; i < n; i++) {
+                temp = b;
+                b = b + a;
+                a = temp;
+            }
+            return b;
         }
     }
 //leetcode submit region end(Prohibit modification and deletion)
 
 }
+
