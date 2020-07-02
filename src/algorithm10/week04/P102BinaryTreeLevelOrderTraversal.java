@@ -52,6 +52,7 @@ public class P102BinaryTreeLevelOrderTraversal {
 
         /**
          * 使用BFS进行遍历，使用queue
+         *
          * @param root
          * @return
          */
@@ -79,7 +80,7 @@ public class P102BinaryTreeLevelOrderTraversal {
                 }
                 result.add(list);
             }
-            return  result;
+            return result;
         }
     }
 //leetcode submit region end(Prohibit modification and deletion)
