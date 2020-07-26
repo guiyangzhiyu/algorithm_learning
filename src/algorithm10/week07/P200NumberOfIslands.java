@@ -28,7 +28,7 @@
 // 
 // Related Topics 深度优先搜索 广度优先搜索 并查集
 
-package leetcode.editor.cn;
+package algorithm10.week07;
 
 public class P200NumberOfIslands {
 
