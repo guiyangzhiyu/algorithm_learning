@@ -173,10 +173,10 @@ public class P212WordSearchIi {
         }
 
         private void dfs(int i, int j, Trie.TrieNode root) {
-            if (i < 0 || i >= row || j < 0 || j >= row || visited[i][j]) {
+            if (i < 0 || i >= row || j < 0 || j >= col || visited[i][j]) {
                 return;
             }
-            root = root.get(board[i][j] = 'a');
+            root = root.get(board[i][j]);
             visited[i][j] = true;
             if (root == null) {
                 visited[i][j] = false;
@@ -192,7 +192,6 @@ public class P212WordSearchIi {
                 }
             }
             //TODO 有问题
-            a
             visited[i][j] = false;
         }
     }
